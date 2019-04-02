@@ -135,13 +135,13 @@ public class Lab6 extends GLJPanel implements GLEventListener  {
 // okreslenie wspolrzednych
 	            gl2.glVertex3f( x, -2.0f, z );
 // ustawienia kolorow materialu
-	            gl2.glMaterialfv(GL2.GL_FRONT_AND_BACK, GL2.GL_AMBIENT_AND_DIFFUSE, materials[i], 2);
+	            gl2.glMaterialfv(GL2.GL_FRONT_AND_BACK, GL2.GL_AMBIENT_AND_DIFFUSE, materials[i], 4);
 // okreslenie wspolrzednych
 	            gl2.glVertex3f( 0.0f, 4.0f, 0.0f );
 
 	            kat = i * inkrementacjaKata;
 //ustawienia kolorow materialu
-	            gl2.glMaterialfv(GL2.GL_FRONT_AND_BACK, GL2.GL_AMBIENT_AND_DIFFUSE	, materials[i],3);
+	            gl2.glMaterialfv(GL2.GL_FRONT_AND_BACK, GL2.GL_AMBIENT_AND_DIFFUSE	, materials[i],4);
 // okreslenie wspolrzednych
 	            gl2.glVertex3f((float) (promien * Math.cos(kat)), -2.0f,(float) (promien * Math.sin(kat)));
 	            gl2.glEnd();
@@ -168,12 +168,9 @@ public class Lab6 extends GLJPanel implements GLEventListener  {
 		gl2.glEnable(GL2.GL_LIGHT0);
 		// TODO configure better lighting!
 		
-		
-		
-		 float[] ambientLevel = { 0.8f, 0.8f, 0.8f, 1f };
-	        gl2.glLightModeli(GL2.GL_LIGHT_MODEL_TWO_SIDE,1);
-	        gl2.glLightModelfv( GL2.GL_LIGHT_MODEL_AMBIENT, ambientLevel,0 );
-		
+		float[] ambientLevel = { 0.8f, 0.8f, 0.8f, 1f };
+	    gl2.glLightModeli(GL2.GL_LIGHT_MODEL_TWO_SIDE, 1);
+	    gl2.glLightModelfv( GL2.GL_LIGHT_MODEL_AMBIENT, ambientLevel, 0 );
 	}
 
 
